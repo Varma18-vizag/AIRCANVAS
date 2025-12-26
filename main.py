@@ -34,7 +34,7 @@ paintWindow =cv2.rectangle(paintWindow,(290,1),(385,65),colors[1],-1)
 paintWindow =cv2.rectangle(paintWindow,(420,1),(515,65),colors[2],-1)
 paintWindow =cv2.rectangle(paintWindow,(550,1),(635,65),colors[3],-1)
 cv2.putText(paintWindow,"CLEAR",(49,33),cv2.FONT_HERSHEY_SIMPLEX,0.5,(0,0,0),2,cv2.LINE_AA)
-#cv2.namedWindow("Paint",cv2.WINDOW_AUTOSIZE)
+cv2.namedWindow("Paint",cv2.WINDOW_AUTOSIZE)
 
 cap=cv2.VideoCapture(0)
 while True:
@@ -127,4 +127,5 @@ while True:
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 cap.release()
+
 cv2.destroyAllWindows()
